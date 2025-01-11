@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Transaction</title>
+  </head>
+  <body>
+    <h1>Edit Transaction</h1>
+
+    <form action="/transactions/edit/<%= transaction._id %>" method="POST">
+      <label for="type">Type:</label>
+      <select name="type" id="type" required>
+        <option value="Income" <%= transaction.type === 'Income' ? 'selected' : '' %>>Income</option>
+        <option value="Expense" <%= transaction.type === 'Expense' ? 'selected' : '' %>>Expense</option>
+      </select>
+      <br>
+
+      <label for="category">Category:</label>
+      <input type="text" name="category" id="category" value="<%= transaction.category %>" required>
+      <br>
+
+      <label for="amount">Amount:</label>
+      <input type="number" name="amount" id="amount" value="<%= transaction.amount %>" required>
+      <br>
+
+      <label for="date">Date:</label>
+      <input type="date" name="date" id="date" value="<%= transaction.date.toISOString().slice(0, 10) %>" required>
+      <br>
+
+      <button type="submit">Update Transaction</button>
+    </form>
+
+    <a href="/transactions">Back to Transactions</a>
+  </body>
+</html>

@@ -66,6 +66,7 @@ router.post('/sign-in', async (req, res) => {
     return res.send('Login failed, please try again');
   }
   // else sign them in
+
   // create a session cookie
   req.session.user = {
     username: user.username,
@@ -73,7 +74,7 @@ router.post('/sign-in', async (req, res) => {
   };
 
   req.session.save(() => {
-    res.redirect('/');
+    res.redirect('/transactions');
   });
 });
 

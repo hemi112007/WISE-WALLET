@@ -9,7 +9,9 @@ require('./config/database');
 
 // Controllers
 const authController = require('./controllers/auth');
+const transactionController = require('./controllers/transaction');
 const isSignedIn = require('./middleware/isSignedIn');
+
 
 const app = express();
 // Set the port from environment variable or default to 3000
@@ -34,6 +36,7 @@ app.use(
   })
 );
 
+
 app.use(addUserToViews);
 
 // Public Routes
@@ -45,6 +48,7 @@ app.use('/auth', authController);
 
 // Protected Routes
 app.use(isSignedIn);
+app.use('/transactions', transactionController);
 
 app.get('/protected', async (req, res) => {
   if (req.session.user) {
