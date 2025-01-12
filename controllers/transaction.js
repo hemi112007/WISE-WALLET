@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET: Show the Add Transaction form
+// Show the Add Transaction form
 router.get('/add', async (req, res) => {
   res.render('transactions/add.ejs');
 });

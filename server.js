@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const methodOverride = require('method-override');
 const morgan = require('morgan');
 const session = require('express-session');
@@ -36,7 +37,7 @@ app.use(
   })
 );
 
-
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(addUserToViews);
 
 // Public Routes
@@ -60,6 +61,6 @@ app.get('/protected', async (req, res) => {
 });
 
 app.listen(port, () => {
-  // eslint-disable-next-line no-console
+  
   console.log(`The express app is ready on port ${port}!`);
 });
