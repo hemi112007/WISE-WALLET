@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transactions</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <h1>Transactions</h1>
-    <% if (user) { %>
-      <a href="/auth/sign-out" class="button">Sign Out</a>
-    <% } %>
 
-    <div class="summary">
+    <div class="container">
+      <p>Welcome, <%= user.username %>!</p>
       <p><strong>Total Income:</strong> $<%= totalIncome.toFixed(2) %></p>
       <p><strong>Total Expenses:</strong> $<%= totalExpense.toFixed(2) %></p>
       <p><strong>Net Balance:</strong> $<%= balance.toFixed(2) %></p>
+
+      <table class="transaction-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% transactions.forEach(transaction => { %>
+            <tr>
+              <td><%= transaction.date.toDateString() %></td>
+              <td><%= transaction.type %></td>
+              <td><%= transaction.category %></td>
+              <td>$<%= transaction.amount.toFixed(2) %></td>
+              <td>
+                <a href="/transactions/edit/<%= transaction._id %>" class="button">Edit</a>
+                <form
+                  action="/transactions/delete/<%= transaction._id %>"
+                  method="POST"
+                  style="display: inline;"
+                >
+                  <button type="submit" class="button">Delete</button>
+                </form>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+      <!-- Button container for Sign Out and Add New Transaction -->
+      <div class="button-container">
+        <a href="/auth/sign-out" class="button">Sign Out</a>
+        <a href="/transactions/add" class="button">Add New Transaction</a>
+      </div>
     </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Type</th>
-          <th>Category</th>
-          <th>Amount</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% transactions.forEach(transaction => { %>
-        <tr>
-          <td><%= transaction.date.toDateString() %></td>
-          <td><%= transaction.type %></td>
-          <td><%= transaction.category %></td>
-          <td>$<%= transaction.amount.toFixed(2) %></td>
-          <td>
-            <a href="/transactions/edit/<%= transaction._id %>">Edit</a> |
-            <form action="/transactions/delete/<%= transaction._id %>" method="POST" style="display: inline;">
-              <button type="submit">Delete</button>
-            </form>
-          </td>
-        </tr>
-        <% }) %>
-      </tbody>
-    </table>
-    <a href="/transactions/add">Add New Transaction</a>
   </body>
 </html>

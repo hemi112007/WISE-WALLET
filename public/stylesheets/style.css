@@ -1,134 +1,131 @@
-
+/* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #121212; /* Dark theme background */
-    color: #f0f0f0; /* Light text color */
-    padding: 20px;
-  }
-  
-  /* Page Headings */
-  h1 {
-    font-size: 2.5em;
-    color: #00ffff;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px #00ffff;
-  }
-  
-  /* Summary Section */
-  .summary {
-    background-color: #927070;; /* Slightly lighter than body */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 80%;
-    margin-bottom: 30px;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-  }
-  
-  .summary p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    color: #00ffff;
-  }
-  
-  /* Transactions Table */
-  table {
-    width: 90%;
-    margin: 20px 0;
-    border-collapse: collapse;
-    background-color: #927070;;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  table th, table td {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #333;
-  }
-  
-  table th {
-    background-color: #00ffff;
-    color: #121212;
-    font-size: 1.1em;
-  }
-  
-  table tr:nth-child(even) {
-    background-color:#927070;;
-  }
-  
-  table tr:hover {
-    background-color: #927070;;
-  }
-  
-  /* Buttons */
-  button, a {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px 0;
-    color: #121212;
-    background-color: #00ffff;
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  button:hover, a:hover {
-    background-color: #008b8b;
-    transform: scale(1.05);
-  }
-  
-  /* Forms */
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 20em;
-    height: auto;
-    background-color: #927070;
-    padding: 30px 40px;
-    border-radius: 20px;
-    color: #ff0099;
-    margin-bottom: 20px;
-  }
-  
-  input {
-    border: 1px solid rgb(182, 182, 182);
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #f0f0f0;
-    color: #121212;
-    margin-bottom: 15px;
-  }
-  
-  button {
-    padding: 10px;
-    background-color: #ff0062;
-    color: white;
-    border-radius: 30px;
-    border: none;
-    margin-top: 15px;
-    font-size: 1.1em;
-  }
-  
-  button:hover {
-    background-color: #008b8b;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Global Styles */
+body {
+  background-color: #0c7547;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23054f31' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: rgb(225, 225, 225); /* Ensure text stands out */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Center Alignment for Headers */
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3em;
+  text-align: center; /* Center the header text */
+  margin-bottom: 20px;
+  color: #0efc57; /* Use the green color */
+  text-shadow: 0px 0px 10px #0efc57, 0px 0px 20px #00ff00;
+}
+
+/* Container Styling */
+.container {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  border-radius: 15px;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Green glow */
+  margin: 20px auto;
+}
+
+/* Buttons */
+button, .button {
+  background-color: #0efc57; /* Green color */
+  color: black; /* Contrast for visibility */
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+button:hover, .button:hover {
+  background-color: #00e64d; /* Lighter green on hover */
+  transform: scale(1.05);
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Center Align Text */
+p, a, table, form {
+  text-align: center; /* Center align all text */
+}
+
+/* Adjust Table */
+.transaction-table {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  color: rgb(241, 241, 241);
+  border-radius: 10px;
+}
+
+.transaction-table th, .transaction-table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.transaction-table th {
+  background-color: #0efc57; /* Green for table headers */
+  color: black;
+  font-weight: bold;
+}
+
+
+/* Inputs and Forms */
+input {
+  border: 1px solid rgb(182, 182, 182);
+  padding: 8px;
+  border-radius: 10px;
+  margin: 10px 0;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Add New Transaction Button Styling */
+.add-transaction-button {
+  margin-top: 20px;
+}
+
+/* Links */
+a {
+  color: #0efc57;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00e64d;
+}

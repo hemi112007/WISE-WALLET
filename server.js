@@ -37,9 +37,9 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(addUserToViews);
 
+app.use(addUserToViews);
+app.use(express.static(path.join(__dirname, 'public')));
 // Public Routes
 app.get('/', async (req, res) => {
   res.render('index.ejs');
