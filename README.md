@@ -41,3 +41,5 @@ Charts & Analytics: Interactive charts to visualize income/expenses over time.
 Mobile Optimization: Further enhancements to improve the app's responsiveness.
 
 Notifications: Set reminders for savings goals.
+
+Credit this channel i took css insporation from (https://www.youtube.com/watch?v=cAKAa5C7R-U)
