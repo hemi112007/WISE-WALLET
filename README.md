@@ -1,9 +1,9 @@
 
 
 **Wise Wallet**
-[App Screenshot](https://i.ibb.co/DLMDRPP/Screenshot-1.png)
-[App Screenshot](https://i.ibb.co/rfvZSg1/Screenshot-2.png)
-[App Screenshot](https://i.ibb.co/2P6j4Pq/Screenshot-3.png)
+![App Screenshot](https://i.ibb.co/DLMDRPP/Screenshot-1.png)
+![App Screenshot](https://i.ibb.co/rfvZSg1/Screenshot-2.png)
+![App Screenshot](https://i.ibb.co/2P6j4Pq/Screenshot-3.png)
 
 **App Name and Description**
 

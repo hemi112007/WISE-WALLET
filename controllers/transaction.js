@@ -2,12 +2,12 @@ const express = require('express');
 const Transaction = require('../models/transaction');
 const router = express.Router();
 
-// Display all transactions for a user
+
 router.get('/', async (req, res) => {
   try {
     const transactions = await Transaction.find({ userId: req.session.user._id });
 
-    // Calculation used 
+    
     const totalIncome = transactions
       .filter((t) => t.type === 'Income')
       .reduce((sum, t) => sum + t.amount, 0);
@@ -29,12 +29,12 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Show the Add Transaction form
+
 router.get('/add', async (req, res) => {
   res.render('transactions/add.ejs');
 });
 
-// Add a new transaction
+
 router.post('/add', async (req, res) => {
   try {
     const { type, category, amount, date } = req.body;
@@ -53,7 +53,7 @@ router.post('/add', async (req, res) => {
   }
 });
 
-//  Show the Edit Transaction form
+
 router.get('/edit/:id', async (req, res) => {
   try {
     const transaction = await Transaction.findById(req.params.id);
@@ -65,7 +65,7 @@ router.get('/edit/:id', async (req, res) => {
   }
 });
 
-// Update a transaction
+
 router.post('/edit/:id', async (req, res) => {
   try {
     const { type, category, amount, date } = req.body;
@@ -82,7 +82,6 @@ router.post('/edit/:id', async (req, res) => {
   }
 });
 
-// Delete a transaction
 router.post('/delete/:id', async (req, res) => {
   try {
     await Transaction.findByIdAndDelete(req.params.id);
@@ -93,5 +92,5 @@ router.post('/delete/:id', async (req, res) => {
   }
 });
 
-// Export the router
+
 module.exports = router;
