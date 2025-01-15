@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,14 +6,14 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Global Styles */
+
 body {
   background-color: #0c7547;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23054f31' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: rgb(225, 225, 225); /* Ensure text stands out */
+  color: rgb(225, 225, 225); 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,32 +22,32 @@ body {
   margin: 0;
 }
 
-/* Center Alignment for Headers */
+
 h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 3em;
-  text-align: center; /* Center the header text */
+  text-align: center; 
   margin-bottom: 20px;
-  color: #0efc57; /* Use the green color */
+  color: #0efc57; 
   text-shadow: 0px 0px 10px #0efc57, 0px 0px 20px #00ff00;
 }
 
-/* Container Styling */
+
 .container {
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  background-color: rgba(0, 0, 0, 0.7); 
   border-radius: 15px;
   padding: 20px;
   width: 90%;
   max-width: 800px;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Green glow */
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); 
   margin: 20px auto;
 }
 
-/* Buttons */
+
 button, .button {
-  background-color: #0efc57; /* Green color */
-  color: black; /* Contrast for visibility */
+  background-color: #0efc57;
+  color: black; 
   padding: 10px 20px;
   border-radius: 10px;
   border: none;
@@ -59,11 +59,11 @@ button, .button {
 }
 
 button:hover, .button:hover {
-  background-color: #00e64d; /* Lighter green on hover */
+  background-color: #00e64d; 
   transform: scale(1.05);
 }
 
-/* Button Container */
+
 .button-container {
   display: flex;
   justify-content: space-between;
@@ -71,18 +71,18 @@ button:hover, .button:hover {
   margin-top: 20px;
 }
 
-/* Center Align Text */
+
 p, a, table, form {
-  text-align: center; /* Center align all text */
+  text-align: center; 
 }
 
-/* Adjust Table */
+
 .transaction-table {
   margin: 20px auto;
   width: 100%;
   max-width: 800px;
   border-collapse: collapse;
-  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  background-color: rgba(0, 0, 0, 0.8); 
   color: rgb(241, 241, 241);
   border-radius: 10px;
 }
@@ -94,13 +94,12 @@ p, a, table, form {
 }
 
 .transaction-table th {
-  background-color: #0efc57; /* Green for table headers */
+  background-color: #0efc57;
   color: black;
   font-weight: bold;
 }
 
 
-/* Inputs and Forms */
 input {
   border: 1px solid rgb(182, 182, 182);
   padding: 8px;
@@ -115,12 +114,12 @@ form {
   align-items: center;
 }
 
-/* Add New Transaction Button Styling */
+
 .add-transaction-button {
   margin-top: 20px;
 }
 
-/* Links */
+
 a {
   color: #0efc57;
   text-decoration: none;
